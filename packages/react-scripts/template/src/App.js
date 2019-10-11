@@ -12,11 +12,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="http://npmhost.muc.moss.itn:4873/#/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn Antares
         </a>
       </header>
     </div>

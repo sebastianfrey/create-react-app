@@ -164,7 +164,6 @@ module.exports = function(
     command = 'npm';
     args = ['install', '--save', verbose && '--verbose'].filter(e => e);
   }
-  args.push('react', 'react-dom');
 
   // Install additional template dependencies, if present
   const templateDependenciesPath = path.join(
@@ -193,6 +192,34 @@ module.exports = function(
       console.error(`\`${command} ${args.join(' ')}\` failed`);
       return;
     }
+  }
+
+  console.log();
+  console.log(`Installing ${chalk.cyan('Antares')} dependencies...`);
+  console.log();
+
+  let antaresArgs = useYarn
+    ? ['add']
+    : ['install', '--save', verbose && '--verbose'].filter(e => e);
+
+  antaresArgs.push(
+    '@moss-ui/react-core',
+    '@moss-ui/react-esri',
+    '@moss-ui/react-esri-ems',
+    '@moss-ui/react-hooks',
+    '@moss-ui/react-hooks-ems'
+  );
+
+  const proc = spawn.sync(command, antaresArgs, { stdio: 'inherit' });
+  if (proc.status !== 0) {
+    console.error(`\`${command} ${antaresArgs.join(' ')}\` failed`);
+    console.log();
+    console.log(
+      `Make sure you have access to MOSS internal NPM-Registry ${chalk.cyan(
+        'http://npmhost.muc.moss.itn:4873/#/'
+      )}.`
+    );
+    return;
   }
 
   if (useTypeScript) {
