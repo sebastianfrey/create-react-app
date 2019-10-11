@@ -221,6 +221,7 @@ module.exports = function(
     : ['install', '--save', verbose && '--verbose'].filter(e => e);
 
   antaresArgs.push(
+    '@moss-ui/react-i18n',
     '@moss-ui/react-core',
     '@moss-ui/react-esri',
     '@moss-ui/react-esri-ems',
