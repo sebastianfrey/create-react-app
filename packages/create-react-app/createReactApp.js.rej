@@ -1,0 +1,16 @@
+diff a/packages/create-react-app/createReactApp.js b/packages/create-react-app/createReactApp.js	(rejected hunks)
+@@ -228 +228,3 @@ function createApp(
+-        `You are using Node ${process.version} so the project will be bootstrapped with an old unsupported version of tools.\n\n` +
++        `You are using Node ${
++          process.version
++        } so the project will be bootstrapped with an old unsupported version of tools.\n\n` +
+@@ -242 +244,3 @@ function createApp(
+-            `You are using npm ${npmInfo.npmVersion} so the project will be bootstrapped with an old unsupported version of tools.\n\n` +
++            `You are using npm ${
++              npmInfo.npmVersion
++            } so the project will be bootstrapped with an old unsupported version of tools.\n\n` +
+@@ -256 +260,3 @@ function createApp(
+-            `You are using Yarn ${yarnInfo.yarnVersion} together with the --use-pnp flag, but Plug'n'Play is only supported starting from the 1.12 release.\n\n` +
++            `You are using Yarn ${
++              yarnInfo.yarnVersion
++            } together with the --use-pnp flag, but Plug'n'Play is only supported starting from the 1.12 release.\n\n` +

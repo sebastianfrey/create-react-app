@@ -1,0 +1,4 @@
+diff a/docusaurus/docs/using-the-public-folder.md b/docusaurus/docs/using-the-public-folder.md	(rejected hunks)
+@@ -32 +32 @@ Inside `index.html`, you can use it like this:
+-<link rel="icon" href="%PUBLIC_URL%/favicon.ico">
++<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />

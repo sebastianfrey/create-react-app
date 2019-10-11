@@ -1,0 +1,7 @@
+diff a/packages/react-scripts/fixtures/kitchensink/integration/initDOM.js b/packages/react-scripts/fixtures/kitchensink/integration/initDOM.js	(rejected hunks)
+@@ -27 +27 @@ export const fetchFile = url => {
+-const fileResourceLoader = new (class FileResourceLoader extends ResourceLoader {
++const fileResourceLoader = new class FileResourceLoader extends ResourceLoader {
+@@ -31 +31 @@ const fileResourceLoader = new (class FileResourceLoader extends ResourceLoader
+-})();
++}();

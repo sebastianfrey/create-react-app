@@ -1,0 +1,4 @@
+diff a/packages/react-dev-utils/browsersHelper.js b/packages/react-dev-utils/browsersHelper.js	(rejected hunks)
+@@ -45 +45 @@ function checkBrowsers(dir, isInteractive, retry = true) {
+-  const current = browserslist.loadConfig({path: dir});
++  const current = browserslist.loadConfig({ path: dir });

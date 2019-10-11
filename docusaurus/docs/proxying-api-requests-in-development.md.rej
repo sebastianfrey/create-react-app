@@ -1,0 +1,13 @@
+diff a/docusaurus/docs/proxying-api-requests-in-development.md b/docusaurus/docs/proxying-api-requests-in-development.md	(rejected hunks)
+@@ -99,4 +99,7 @@ module.exports = function(app) {
+-  app.use('/api', proxy({
+-    target: 'http://localhost:5000',
+-    changeOrigin: true,
+-  }));
++  app.use(
++    '/api',
++    proxy({
++      target: 'http://localhost:5000',
++      changeOrigin: true,
++    })
++  );
